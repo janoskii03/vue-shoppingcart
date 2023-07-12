@@ -116,7 +116,7 @@
                             {{item.quantity}}
                         </div>
                         <button v-on:click="minus(index)">-</button>
-                        <button v-on:click="del" class="del">X</button>
+                        <button v-on:click="del(index)" class="del">X</button>
                     </div>
 
 
@@ -189,8 +189,8 @@
 
             },
             methods: {
-                del() {
-                    this.shoplist.splice(0, 1);
+                del(index) {
+                    this.shoplist.splice(index, 1);
                 },
 
                 add(i) {
